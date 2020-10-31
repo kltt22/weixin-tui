@@ -1,50 +1,43 @@
-2016-03-26 bjlm124.taobao.com ×Ü½á×î½ü°²×°³öÏÖÎÊÌâ£º
+2016-03-26 bjlm124.taobao.com æ€»ç»“æœ€è¿‘å®‰è£…å‡ºçŽ°é—®é¢˜ï¼š
 
-1£¬°²×°±¾³ÌÐò·þÎñÆ÷ÐèÒªÖ§³ÖPHP£¬°²×°MYSQLÊý¾Ý¿â£¬Ò²¾ÍÊÇPHP+MYSQLÅäÖÃ¡£
-   PHP×îºÃ5.1ÒÔÉÏ¡£
+1ï¼Œå®‰è£…æœ¬ç¨‹åºæœåŠ¡å™¨éœ€è¦æ”¯æŒPHPï¼Œå®‰è£…MYSQLæ•°æ®åº“ï¼Œä¹Ÿå°±æ˜¯PHP+MYSQLé…ç½®ã€‚
+   PHPæœ€å¥½5.1ä»¥ä¸Šã€‚
 
-2£¬ÏÂÃæ°²×°µÄµÚÒ»²½£¬Ê¹ÓÃ±à¼­Èí¼þ´ò¿ªinclude/common.inc.php ÐÞ¸ÄÎÄ¼þÖÐµÄÊý¾Ý¿âÕÊºÅÃÜÂë¡£
+2ï¼Œä¸‹é¢å®‰è£…çš„ç¬¬ä¸€æ­¥ï¼Œä½¿ç”¨ç¼–è¾‘è½¯ä»¶æ‰“å¼€include/common.inc.php ä¿®æ”¹æ–‡ä»¶ä¸­çš„æ•°æ®åº“å¸å·å¯†ç ã€‚
 
-define('DB_HOST','localhost');//Êý¾Ý¿âÁ¬½ÓµØÖ·,Êý¾Ý¿â½Ó¿Ú£¨Ä¬ÈÏ£º3306£©
-define('DB_USER','root');//Êý¾Ý¿âÓÃ»§Ãû 
-define('DB_PWD','root');//Êý¾Ý¿âÃÜÂë 
-define('DB_NAME','root');//Êý¾Ý¿âÃû
+define('DB_HOST','localhost');//æ•°æ®åº“è¿žæŽ¥åœ°å€,æ•°æ®åº“æŽ¥å£ï¼ˆé»˜è®¤ï¼š3306ï¼‰
+define('DB_USER','root');//æ•°æ®åº“ç”¨æˆ·å 
+define('DB_PWD','root');//æ•°æ®åº“å¯†ç  
+define('DB_NAME','root');//æ•°æ®åº“å
 
-Äã»áÕÒµ½ÕâÑùµÄ¼¸ÐÐ£¬×¢Òâ£¬ÕâÀïÊÇ°ÑÄãµÄ×ÊÁÏ£¬Ìæ»»µôÖÐ¼äµÄroot²¿·Ö£¬¶ø²»ÊÇÖÐÎÄ²¿·Ö¡£ÁíÍâ×¢ÒâºóÃæµÄ×¢ÊÍ£¬²»ÒªÌîµßµ¹ÁË¡£µÚÒ»Ìõ²»ÓÃ¸Ä¡£³ý·ÇÄãµÄÊý¾Ý¿âºÍÄãµÄ³ÌÐò²»ÔÚÒ»¸ö·þÎñÆ÷ÉÏ¡£
+ä½ ä¼šæ‰¾åˆ°è¿™æ ·çš„å‡ è¡Œï¼Œæ³¨æ„ï¼Œè¿™é‡Œæ˜¯æŠŠä½ çš„èµ„æ–™ï¼Œæ›¿æ¢æŽ‰ä¸­é—´çš„rootéƒ¨åˆ†ï¼Œè€Œä¸æ˜¯ä¸­æ–‡éƒ¨åˆ†ã€‚å¦å¤–æ³¨æ„åŽé¢çš„æ³¨é‡Šï¼Œä¸è¦å¡«é¢ å€’äº†ã€‚ç¬¬ä¸€æ¡ä¸ç”¨æ”¹ã€‚é™¤éžä½ çš„æ•°æ®åº“å’Œä½ çš„ç¨‹åºä¸åœ¨ä¸€ä¸ªæœåŠ¡å™¨ä¸Šã€‚
 
-3£¬ÐèÒªÐÞ¸Ä»áÔ±×ÔÖú×¢²áÊ¹ÓÃÎÄÕÂÌõÊý£¬ÊÔÓÃÊ±¼äµÈ
-   ÇëÐÞ¸Äregister.phpÎÄ¼þ
-  µÚ168ÐÐ  <input name="anums" type="hidden" class="dfinput"  value="10" />  
-    value="10" ±íÊ¾×ÔÖú×¢²á ÓÐ10ÌõÎÄÕÂÊÔÓÃ£¬¿ÉÒÔÐÞ¸ÄÊý×Ö¡£
-  µÚ170ÐÐ  <input name="beizhu1" type="hidden" class="dfinput"  value="<?php echo $showtime=date("Y-m-d H:i:s",time() + 20*86400);?>" />
-    20*86400  ±íÊ¾ÊÔÓÃÆÚÎª20Ìì£¬ÕâÀïÊÇ°´Ãë¼ÆËãµÄ£¬ÐèÒªÐÞ¸ÄÌìÊý£¬¾ÍÐÞ¸ÄÄÇ¸öÊý×Ö20¾ÍÐÐÁË¡£
-
-
-PS£ºÑÝÊ¾Õ¾ www.at168.com/login.php  
-    ÕÆ¹ñ×Ô¼ºÐÞ¸ÄÁËÎÄÕÂÁÐ±íÒ³É¾³ý¹¦ÄÜ¡¢ÎÄÕÂÒ³¡°»»³ÉÄãµÄ¹ã¸æ µã»÷ÕâÀï¡±Á½¸ö¹¦ÄÜ¡£
-    ÔÚ±¾³ÌÐòÎÄ¼þÀïÃ»ÓÐ¼ÓÈë£¬ÒòÎªÓÐµÄÅóÓÑ²»Ï²»¶£¬Èç¹ûÄúÐèÒª£¬¿ÉÒÔÁªÏµÕÆ¹ñË÷Òª¡£Ãâ·ÑµÄ¡£
-
-    ÕÆ¹ñ»¹»á¸ù¾ÝÓÃ»§ÌåÑéÐÞ¸ÄÒ»Ð©¹¦ÄÜ£¬Äú¿ÉÒÔ¹Ø×¢ÑÝÊ¾Õ¾£¬·¢ÏÖÓÐÐèÒªµÄ¹¦ÄÜ£¬¿ÉÒÔÃâ·ÑÏòÕÆ¹ñË÷Òª¡£
+3ï¼Œéœ€è¦ä¿®æ”¹ä¼šå‘˜è‡ªåŠ©æ³¨å†Œä½¿ç”¨æ–‡ç« æ¡æ•°ï¼Œè¯•ç”¨æ—¶é—´ç­‰
+   è¯·ä¿®æ”¹register.phpæ–‡ä»¶
+  ç¬¬168è¡Œ  <input name="anums" type="hidden" class="dfinput"  value="10" />  
+    value="10" è¡¨ç¤ºè‡ªåŠ©æ³¨å†Œ æœ‰10æ¡æ–‡ç« è¯•ç”¨ï¼Œå¯ä»¥ä¿®æ”¹æ•°å­—ã€‚
+  ç¬¬170è¡Œ  <input name="beizhu1" type="hidden" class="dfinput"  value="<?php echo $showtime=date("Y-m-d H:i:s",time() + 20*86400);?>" />
+    20*86400  è¡¨ç¤ºè¯•ç”¨æœŸä¸º20å¤©ï¼Œè¿™é‡Œæ˜¯æŒ‰ç§’è®¡ç®—çš„ï¼Œéœ€è¦ä¿®æ”¹å¤©æ•°ï¼Œå°±ä¿®æ”¹é‚£ä¸ªæ•°å­—20å°±è¡Œäº†ã€‚
 
 
-¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
- ÕÆÉÏÍÆ¹ã£¨Î¢ÐÅÅóÓÑÈ¦¹ã¸æÖ²ÈëÏµÍ³£©
-Ê¹ÓÃËµÃ÷£º
- 1.Ê¹ÓÃ±à¼­Èí¼þ´ò¿ªinclude/common.inc.php ÐÞ¸ÄÎÄ¼þÖÐµÄÊý¾Ý¿âÕÊºÅÃÜÂë¡£
- 2.½«¸ùÄ¿Â¼ÖÐµÄzhangshangtg.sql µ¼ÈëÄúµÄÊý¾Ý¿âÖÐ¡£
- 3.ÉÏ´«ÍøÕ¾³ÌÐòµ½ÄúµÄÍøÕ¾¸ùÄ¿Â¼ÖÐ¡£
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+ æŽŒä¸ŠæŽ¨å¹¿ï¼ˆå¾®ä¿¡æœ‹å‹åœˆå¹¿å‘Šæ¤å…¥ç³»ç»Ÿï¼‰
+ä½¿ç”¨è¯´æ˜Žï¼š
+ 1.ä½¿ç”¨ç¼–è¾‘è½¯ä»¶æ‰“å¼€include/common.inc.php ä¿®æ”¹æ–‡ä»¶ä¸­çš„æ•°æ®åº“å¸å·å¯†ç ã€‚
+ 2.å°†æ ¹ç›®å½•ä¸­çš„zhangshangtg.sql å¯¼å…¥æ‚¨çš„æ•°æ®åº“ä¸­ã€‚
+ 3.ä¸Šä¼ ç½‘ç«™ç¨‹åºåˆ°æ‚¨çš„ç½‘ç«™æ ¹ç›®å½•ä¸­ã€‚
 
-ºóÌ¨µØÖ·£º
+åŽå°åœ°å€ï¼š
 
- ÄúµÄÓòÃû/admin
+ æ‚¨çš„åŸŸå/admin
 
  admin admin123
 
-³£¼ûÎÊÌâ£º
+å¸¸è§é—®é¢˜ï¼š
 
-  ÐÞ¸Äfoot¼°foot1ºÍfoot2 ½«ÀïÃæµÄÁªÏµ·½Ê½¼°¿Í·þÁ´½ÓÐÞ¸Ä³ÉÄã×Ô¼ºµÄ£¡
+  ä¿®æ”¹footåŠfoot1å’Œfoot2 å°†é‡Œé¢çš„è”ç³»æ–¹å¼åŠå®¢æœé“¾æŽ¥ä¿®æ”¹æˆä½ è‡ªå·±çš„ï¼
   
-ÍÆ¼ö¹¤¾ß£º
+æŽ¨èå·¥å…·ï¼š
 
   Notepad++
   
